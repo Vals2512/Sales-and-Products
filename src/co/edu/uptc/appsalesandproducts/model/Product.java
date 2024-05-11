@@ -10,7 +10,7 @@ public class Product {
 	public Product() {
 	}
 
-	public Product(String code, String description, float price, int quantity) {
+	public Product(String code, String description, double price, int quantity) {
 		this.code = code;
 		this.description = description;
 		this.price = price;
@@ -57,3 +57,4 @@ public class Product {
 	
 
 }
+

@@ -4,26 +4,38 @@ import java.time.LocalDate;
 
 public class Sale {
 
-	
-	Product product;
+	/*
+	 * Sea agrega una variable saleId ya que en un día es posible que haya más de una venta y de esta manera es más facil identificar la venta realizada
+	 */
+	private String saleId;
+	private String codeProduct;
 	private double total ;
-	private LocalDate saleDate;
+	private String saleDate;
 	
 	public Sale() {
 	}
 	
-	public Sale(Product product, double total, LocalDate saleDate) {
-		this.product = product;
+	public Sale(String saleId, String codeProduct, double total, String saleDate) {
+		this.saleId = saleId;
+		this.codeProduct = codeProduct;
 		this.total = total;
-		this.saleDate = saleDate;
+		this.saleDate = saleDate;	
 	}
 
-	public Product getProduct() {
-		return product;
+	public String getSaleId() {
+		return saleId;
 	}
 
-	public void setProduct(Product product) {
-		this.product = product;
+	public void setSaleId(String saleId) {
+		this.saleId = saleId;
+	}
+
+	public String getCodeProduct() {
+		return codeProduct;
+	}
+
+	public void setCodeProduct(String codeProduct) {
+		this.codeProduct = codeProduct;
 	}
 
 	public double getTotal() {
@@ -34,18 +46,18 @@ public class Sale {
 		this.total = total;
 	}
 
-	public LocalDate getSaleDate() {
+	public String getSaleDate() {
 		return saleDate;
 	}
 
-	public void setSaleDate(LocalDate saleDate) {
+	public void setSaleDate(String saleDate) {
 		this.saleDate = saleDate;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Sale [Product=" + product + ", Total=" + total + ", Sale Date=" + saleDate + "]";
+		return "Sale [Product=" + codeProduct + ", Total=" + total + ", Sale Date=" + saleDate + "]";
 	}
 	
 }
