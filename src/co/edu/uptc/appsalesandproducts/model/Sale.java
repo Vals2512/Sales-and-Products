@@ -1,25 +1,22 @@
 package co.edu.uptc.appsalesandproducts.model;
 
-import java.time.LocalDate;
-
 public class Sale {
 
-	/*
-	 * Sea agrega una variable saleId ya que en un día es posible que haya más de una venta y de esta manera es más facil identificar la venta realizada
-	 */
 	private String saleId;
 	private String codeProduct;
-	private double total ;
+	private double total;
 	private String saleDate;
-	
+	private int quantitySold;
+
 	public Sale() {
 	}
-	
-	public Sale(String saleId, String codeProduct, double total, String saleDate) {
+
+	public Sale(String saleId, String codeProduct, double total, String saleDate, int quantitySold) {
 		this.saleId = saleId;
 		this.codeProduct = codeProduct;
 		this.total = total;
-		this.saleDate = saleDate;	
+		this.saleDate = saleDate;
+		this.quantitySold = quantitySold;
 	}
 
 	public String getSaleId() {
@@ -53,11 +50,18 @@ public class Sale {
 	public void setSaleDate(String saleDate) {
 		this.saleDate = saleDate;
 	}
-	
-	
+
+	public int getQuantitySold() {
+		return quantitySold;
+	}
+
+	public void setQuantitySold(int quantitySold) {
+		this.quantitySold = quantitySold;
+	}
+
 	@Override
 	public String toString() {
-		return "Sale [Product=" + codeProduct + ", Total=" + total + ", Sale Date=" + saleDate + "]";
+		return "Sale [Product=" + codeProduct + ", Total=" + total + ", Sale Date=" + saleDate + ", Quantity Sold="
+				+ quantitySold + "]";
 	}
-	
 }

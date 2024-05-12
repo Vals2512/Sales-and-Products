@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Runner",
+            "request": "launch",
+            "mainClass": "co.edu.uptc.appsalesandproducts.runner.Runner",
+            "projectName": "SalesAndProducts"
+        },
+        {
+            "type": "java",
+            "name": "Launch",
+            "request": "launch",
+            "mainClass": "${fileBasename}"
+        }
+    ]
+}

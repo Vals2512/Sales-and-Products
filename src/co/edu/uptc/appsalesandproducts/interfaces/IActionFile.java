@@ -6,6 +6,6 @@ public interface IActionFile {
 
     public void dumpFile(ETypeFile eTypeFile);
 
-    public void loadStudent(ETypeFile eTypeFile);
+    public void loadProduct(ETypeFile eTypeFile);
 
 }

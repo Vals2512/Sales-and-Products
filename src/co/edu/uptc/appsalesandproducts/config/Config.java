@@ -9,6 +9,7 @@ public class Config {
 	private static Config config;
 	private Properties properties;
 	private String path;
+	private String path2;
 	private String nameFileTXT;
 	private String nameFileXML;
 
@@ -20,6 +21,7 @@ public class Config {
 			this.path = properties.getProperty("app.file.path.txt");
 			this.nameFileTXT = properties.getProperty("app.file.name.txt");
 			this.nameFileXML = properties.getProperty("app.file.name.xml");
+			this.path2 = properties.getProperty("stock.minimo.alerta");
 		} catch (IOException ex) {
 			System.err.println("Error al cargar el archivo properties de configuración: " + ex.getMessage());
 		}
@@ -62,6 +64,22 @@ public class Config {
 
 	public void setNameFileXML(String nameFileXML) {
 		this.nameFileXML = nameFileXML;
+	}
+
+	public static Config getConfig() {
+		return config;
+	}
+
+	public static void setConfig(Config config) {
+		Config.config = config;
+	}
+
+	public String getPath2() {
+		return path2;
+	}
+
+	public void setPath2(String path2) {
+		this.path2 = path2;
 	}
 
 }
